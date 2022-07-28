@@ -89,7 +89,7 @@ while($row=mysqli_fetch_array($sql))
 
 <div class="form-group">
     <label for="CGPA">CGPA  </label>
-    <input type="text" class="form-control" id="cgpa" name="cgpa"  value="<?php echo htmlentities($row['cgpa']);?>" required />
+    <input type="text" class="form-control" id="cgpa" name="cgpa" readonly  value="<?php echo htmlentities($row['cgpa']);?>" required />
   </div>  
 
 

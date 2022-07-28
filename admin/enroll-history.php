@@ -50,7 +50,7 @@ else{
                         </div>
                        
                         <div class="panel-body">
-                            <div class="table-responsive table-bordered">
+                            <div  class="table-responsive table-bordered">
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -63,6 +63,7 @@ else{
                                                 <th>Semester</th>
                                              <th>Enrollment Date</th>
                                              <th>Action</th>
+                                             <th>Grade</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -85,9 +86,11 @@ while($row=mysqli_fetch_array($sql))
                                              <td><?php echo htmlentities($row['edate']);?></td>
                                             <td>
                                             <a href="print.php?id=<?php echo $row['cid']?>" target="_blank">
-<button class="btn btn-primary"><i class="fa fa-print "></i> Print</button> </a>                                        
-
-
+<button class="btn btn-primary"><i class="fa fa-print "></i> Print</button> </a>
+                                                <button class="addGrade btn btn-info">Score</button>
+                                            </td>
+                                            <td class="studentGrade">
+                                                
                                             </td>
                                         </tr>
 <?php 
@@ -114,7 +117,7 @@ $cnt++;
   <?php include('includes/footer.php');?>
     
     <script src="assets/js/jquery-1.11.1.js"></script>
-    
+    <script src="assets/js/praise.js"></script>
     <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>
